@@ -1,0 +1,11 @@
+<div id = 'text_box'>
+	<form>
+		{{textarea id = 'text_area' autofocus = "autofocus" placeholder = "What is your question today?" value = question_value}}<br>
+		{{#if question_value}} 
+			<input type = 'submit' id = 'submit_button' {{action 'save_and_post_question'}}>
+		{{/if}}
+	</form>
+</div>
+<br>
+<div id = 'response_message'>{{submit_response_message}}</div>
+<div id = 'question_area_id'></div>
