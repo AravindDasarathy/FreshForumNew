@@ -8,9 +8,9 @@ export default Controller.extend({
   actions : {
 		save_and_post_question() {
 			const question = this.get('question_value');
-			// const new_question = this.store.createRecord('question-model', {question : question});
+			const new_question = this.store.createRecord('question-model', {question : question});
 			this.store.createRecord('question-model', {question : question});
-			// new_question.save();
+			new_question.save();
 			this.set('submit_response_message','Thank You! Your question has been successfully posted!');
 			this.set('display_question',question);
 			this.set('question_value','');

@@ -52,3 +52,12 @@ input#submit_button {
 	background: #0016A2;
 	color : white;
 }
+
+div#response_message {
+	color: #0016A2;
+	font-size: 18pt;
+}
+
+p.question_text {
+	font-size : 18pt;
+}
