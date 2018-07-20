@@ -9,8 +9,8 @@ const Router = EmberRouter.extend({
 Router.map(function() {
   this.route('home');
   this.route('questions');
-  this.route('anwers');
   this.route('answers');
+  this.route('signout');
 });
 
 export default Router;
