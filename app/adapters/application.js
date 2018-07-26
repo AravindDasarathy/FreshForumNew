@@ -1,6 +1,6 @@
 import DS from 'ember-data';
 export default DS.RESTAdapter.extend({
-    host : "",
+    host : "http://localhost:8080",
     shouldReloadAll() {
         return true;
     }

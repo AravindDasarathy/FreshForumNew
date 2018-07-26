@@ -9,6 +9,6 @@
 <div id = 'question_area_id'>
 	{{#each model as |ques|}}
 		<p class = 'question_text'>{{ques.question}}</p>
-		<span id = 'question_time'>Created at : {{date-formatter ques.question_time}}</span>
+		<span id = 'question_time'>Created at : {{date-formatter ques.question_timestamp}}</span>
 	{{/each}}
 </div>
