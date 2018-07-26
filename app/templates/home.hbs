@@ -1,11 +1,14 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <div id = 'text_box'>
-	<form>
+	<form {{action 'save_question' on='submit'}}>
 		{{textarea id = 'text_area' autofocus = "autofocus" placeholder = "What is your question today?" value = question_value}}<br>
-		{{#if question_value}} 
-			<input type = 'submit' id = 'submit_button' {{action 'save_and_post_question'}}>
-		{{/if}}
+		{{input type = 'submit' value = 'Submit' id = 'submit_button' disabled = (if question_value false true)}}
 	</form>
 </div>
 <br>
-<div id = 'response_message'></div>
-<div id = 'question_area_id'></div>
+<div id = 'question_area_id'>
+	{{#each model as |ques|}}
+		<p class = 'question_text'>{{ques.question}}</p>
+		<span id = 'question_time'>Created at : {{date-formatter ques.question_time}}</span>
+	{{/each}}
+</div>

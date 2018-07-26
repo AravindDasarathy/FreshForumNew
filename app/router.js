@@ -7,7 +7,7 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
-  this.route('home');
+  this.route('home', function() {});
   this.route('questions');
   this.route('answers');
   this.route('signout');
